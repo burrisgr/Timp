@@ -1,245 +1,100 @@
-/* Style the Body */
-body,
-html {
-  height: 100%;
-  font-family: "Inconsolata", sans-serif;
-}
-
-/* Style the Nav Bar */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  font-family: 'Ubuntu', sans-serif;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: whitesmoke;
-  text-align: center;
-  padding: 14px 16px;
-
-}
-
-li a:hover:not(.active) {
-  background-color: #111;
-  text-decoration: none;
-  color: lightskyblue;
-
-}
-
-.active {
-  background-color: lightskyblue;
-
-}
-
-.active:hover {
-  text-decoration: none;
-  color: black;
-}
-
-/* Style the jumbotron */
-.jumbotron {
-  text-align: center;
-  color: black;
-  background: url('home-background.jpg');
-  background-size: cover;
-  padding: 10px;
-  height: 500px;
-  background-position-y: 1000px;
-}
-
-/* Style the website name */
-.name {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: lightskyblue;
-  margin: 25px;
-  padding: 5px;
-}
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {
-  float: left;
-  width: 75%;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Add a card effect for articles */
-.box {
-   background-color: whitesmoke;
-   padding: 20px;
-   margin-top: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
+* {
   box-sizing: border-box;
 }
 
-/* Set a style for all buttons */
-button {
-  background-color:  #333;
-  color:whitesmoke;
-  border: none;
-  cursor: pointer;
-  float: right;
-  list-style-type: none;
-  margin: 0;
-  overflow: hidden;
-  background-color: #333;
-  text-align: center;
-  padding: 14px 16px;
+body {
+  font-family: 'Indie Flower', cursive;
 }
 
-button:hover {
-  background-color: #111;
-  text-decoration: none;
-  color: lightskyblue;
+p {
+  font-size: 20px;
 }
 
-/* Extra styles for the 2nd login button */
-
-.loginbtn {
-  width: 78px;
-  padding: 10px 18px;
-  background-color: lightskyblue;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-.cancelbtn:hover {
-  background-color:#f44336;
-  color: #111;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-
-img.avatar {
-  width: 10%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: left;
-  padding-top: 10px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
+h2 {
   background-color: whitesmoke;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  margin: auto;
+  text-align: center;
+  width: 300px;
+  height: 75px;
 }
 
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
+.title {
+  margin: 5px;
+  padding: 10px;
+  background-color: whitesmoke;
+
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  background-image: url("bcart2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: -200px;
+  height: 400px;
+  padding: 30px;
+  margin: 5px;
+  text-align: center;
   font-size: 35px;
-  font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
+.footer {
+  background-color: whitesmoke;
+  padding: 10px;
+  margin: 5px;
 }
 
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
+/* Container for flexboxes */
+.parent {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)}
-  to {-webkit-transform: scale(1)}
+/* Create three equal columns that sits next to each other */
+.content {
+  flex: 1;
+  flex-basis: 240px;
+  margin: 5px;
 }
 
-@keyframes animatezoom {
-  from {transform: scale(0)}
-  to {transform: scale(1)}
+#content1 {
+  flex-grow: 1;
+  background-color:#DC143C;
+  padding: 10px;
 }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
+#content2 {
+  flex-grow: 5;
+  background-color:#4169E1;
+  padding: 10px;
+}
+
+#content3 {
+  flex-grow: 16;
+  background-color:#3CB371;
+  padding: 10px;
+}
+
+img {
+  display: inline-block;
+}
+
+.kaws {
+  display: block;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .parent {
+    -webkit-flex-direction: column;
+    flex-direction: column;
   }
 }
